@@ -14,6 +14,9 @@ public class RedeemCode : MonoBehaviour
 
     // Text to display the player's points
     public TMP_Text pointsText;
+    public TMP_Text pointsAddText;
+
+    public Animator Score;
 
     // A dictionary to store valid codes and their corresponding points
     private Dictionary<string, (int points, GameObject uiElement)> validCodes = new Dictionary<string, (int, GameObject)>()
@@ -32,7 +35,8 @@ public class RedeemCode : MonoBehaviour
     };
 
     // Variable to track the player's total points
-    private int playerPoints = 0;
+    private int playerPoints = 0000;
+    private int playerAddPoints = 0000;
 
     void Start()
     {
@@ -40,20 +44,23 @@ public class RedeemCode : MonoBehaviour
         // Initialize the points display
         UpdatePointsText();
 
+        //Score = GetComponent<Animator>();
+
+
         // Add a listener to the redeem button
         redeemButton.onClick.AddListener(Redeem);
 
 
-        validCodes["HG428"] = (1000, GameObject.Find("SpecialUIElement1"));
-        validCodes["IK222"] = (300, GameObject.Find("SpecialUIElement2"));
-        validCodes["GA024"] = (200, GameObject.Find("SpecialUIElement3"));
-        validCodes["ES124"] = (200, GameObject.Find("SpecialUIElement4"));
-        validCodes["CU083"] = (300, GameObject.Find("SpecialUIElement5"));
-        validCodes["GK234"] = (500, GameObject.Find("SpecialUIElement6"));
-        validCodes["EC093"] = (300, GameObject.Find("SpecialUIElement7"));
-        validCodes["OE430"] = (200, GameObject.Find("SpecialUIElement8"));
-        validCodes["TS222"] = (200, GameObject.Find("SpecialUIElement9"));
-        validCodes["CV450"] = (500, GameObject.Find("SpecialUIElement10"));
+        validCodes["HG428"] = (1000, GameObject.Find("Holy Grail"));
+        validCodes["IK222"] = (300, GameObject.Find("Ikenga"));
+        validCodes["GA024"] = (200, GameObject.Find("Gye Nyame Amulet"));
+        validCodes["ES124"] = (200, GameObject.Find("Enchanted Scroll of Secrets"));
+        validCodes["CU083"] = (300, GameObject.Find("Crystal of Unity"));
+        validCodes["GK234"] = (500, GameObject.Find("Golden Key of Opportunity"));
+        validCodes["EC093"] = (300, GameObject.Find("Elixir of Creativity"));
+        validCodes["OE430"] = (200, GameObject.Find("Orb of Enlightenment"));
+        validCodes["TS222"] = (200, GameObject.Find("Talisman of Strength"));
+        validCodes["CV450"] = (500, GameObject.Find("Crown of Victory"));
 
         // Ensure all UI elements start as inactive
         foreach (var code in validCodes)
@@ -73,6 +80,7 @@ public class RedeemCode : MonoBehaviour
         {
             // Add points for the redeemed code
             playerPoints += validCodes[enteredCode].points;
+            playerAddPoints = validCodes[enteredCode].points;
 
             // Activate the associated UI element, if any
             if (validCodes[enteredCode].uiElement != null)
@@ -85,6 +93,8 @@ public class RedeemCode : MonoBehaviour
 
             // Update the points display
             UpdatePointsText();
+
+            Score.Play("Add");
 
             // Provide feedback to the player
             Debug.Log("Code redeemed successfully!");
@@ -102,5 +112,7 @@ public class RedeemCode : MonoBehaviour
     void UpdatePointsText()
     {
         pointsText.text = playerPoints.ToString();
+        pointsAddText.text = playerAddPoints.ToString();
+        
     }
 }

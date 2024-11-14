@@ -585,8 +585,24 @@
       <HintPath>Library\PackageCache\com.unity.ext.nunit\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="JustCRC32C">
+      <HintPath>Assets\Packages\JustCRC32C.1.1.0\lib\netstandard2.0\JustCRC32C.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="zxing">
       <HintPath>Assets\Packages\ZXing.Net.0.16.9\lib\netstandard2.1\zxing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TonSdk.Connect">
+      <HintPath>Assets\Packages\TonSdk.Connect.0.2.4\lib\netstandard2.1\TonSdk.Connect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NaCl">
+      <HintPath>Assets\Packages\NaCl.Net.0.1.13\lib\netstandard2.1\NaCl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TonSdk.Core">
+      <HintPath>Assets\Packages\TonSdk.Core.0.3.2\lib\netstandard2.1\TonSdk.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
@@ -599,22 +615,6 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NaCl">
-      <HintPath>Assets\Packages\NaCl.Net.0.1.13\lib\netstandard2.1\NaCl.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="JustCRC32C">
-      <HintPath>Assets\Packages\JustCRC32C.1.1.0\lib\netstandard2.0\JustCRC32C.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="TonSdk.Connect">
-      <HintPath>Assets\Packages\TonSdk.Connect.0.2.4\lib\netstandard2.1\TonSdk.Connect.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="TonSdk.Core">
-      <HintPath>Assets\Packages\TonSdk.Core.0.3.2\lib\netstandard2.1\TonSdk.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

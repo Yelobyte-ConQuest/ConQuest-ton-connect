@@ -19,11 +19,12 @@ public class UI : MonoBehaviour
 
     public void EventInfo()
     {
-        eventPage.SetActive(true);
+        
         gameexpoPage.SetActive(false);
         adventurerPage.SetActive(false);
         treasureHuntPage.SetActive(false);
         MainPanel.SetActive(false);
+        eventPage.SetActive(true);
     }
 
 
