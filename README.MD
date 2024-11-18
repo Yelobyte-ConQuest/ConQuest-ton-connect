@@ -39,7 +39,7 @@ Future updates will include augmented reality (AR) challenges and live-stream fe
 ### Steps
 1. Clone this repository:
    ```bash
-   git clone https://github.com/username/repo.git
+   git clone https://github.com/Yelobyte-ConQuest/ConQuest-ton-connect.git
 2. Open the project in Unity.
 3. Run the game in the Unity editor or build for your desired platform.
 
