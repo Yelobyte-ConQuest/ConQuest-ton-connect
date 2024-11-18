@@ -14,8 +14,32 @@ public class UI : MonoBehaviour
     public GameObject SignupUI;
     public GameObject MainPanel;
     public GameObject InputSignupUI;
+    public GameObject MenuUI;
+    public Animator SideMenu;
 
-    
+
+    public void MenuPopUp()
+    {
+
+        MenuUI.SetActive(true);
+        SideMenu.Play("popup");
+
+    }
+
+    public void MenuPopOut()
+    {
+        
+        SideMenu.Play("popout");
+        StartCoroutine(DisableMenuAfterDelay(0.5f)); // Start a coroutine to disable the menu after 0.5 seconds
+
+    }
+
+
+    private IEnumerator DisableMenuAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        MenuUI.SetActive(false); // Disable the UI GameObject
+    }
 
     public void EventInfo()
     {

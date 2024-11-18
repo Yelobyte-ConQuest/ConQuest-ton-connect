@@ -248,6 +248,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Yelo_coin
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1064
+        width: 398
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cd381644496ea4aac10f957c5b1145
+      internalID: -504621147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1077
+        width: 169
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd648f57454337b47ae286e29a052a6a
+      internalID: 1903899903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -264,6 +308,8 @@ TextureImporter:
       Medal_bronze: 6634503012029667424
       Medal_gold: -4445395469136124364
       Medal_silver: 6887995943226969594
+      Menu: 1903899903
+      Yelo_coin: -504621147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

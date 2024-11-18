@@ -16,6 +16,7 @@ public class RedeemCode : MonoBehaviour
     public TMP_Text pointsText;
     public TMP_Text pointsAddText;
 
+    // Animated game object
     public Animator Score;
 
     // A dictionary to store valid codes and their corresponding points
@@ -44,7 +45,7 @@ public class RedeemCode : MonoBehaviour
         // Initialize the points display
         UpdatePointsText();
 
-        //Score = GetComponent<Animator>();
+        
 
 
         // Add a listener to the redeem button

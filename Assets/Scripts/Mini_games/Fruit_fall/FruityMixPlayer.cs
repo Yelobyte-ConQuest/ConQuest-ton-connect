@@ -27,6 +27,8 @@ public class FruityMixPlayer : MonoBehaviour
     public FruitFall fruitgame;
 
 
+    
+
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -87,6 +89,8 @@ public class FruityMixPlayer : MonoBehaviour
         {
             score = 0;
         }
+
+
 
 
 
