@@ -2373,6 +2373,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1580044195}
+        m_TargetAssemblyTypeName: TonConnectHandler, Assembly-CSharp
+        m_MethodName: CreateTonConnectInstance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1493149116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,9 +2609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b71f0e50db37e344be6ce980831b8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseWebWallets: 1
-  RestoreConnectionOnAwake: 1
-  ManifestURL: 
+  UseWebWallets: 0
+  RestoreConnectionOnAwake: 0
+  ManifestURL: https://odyssei.io/tonconnect.json
   WalletsListSource: 
   WalletsListCacheTTL: 0
 --- !u!4 &1580044196
