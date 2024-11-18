@@ -10,7 +10,7 @@ An immersive event-based gamification platform where players participate in exci
 - [Installation](#installation)
 - [How to Play](#how-to-play)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
+- [Acknowledgments](#Acknowledgments)
 - [License](#license)
 
 
@@ -52,6 +52,12 @@ Future updates will include augmented reality (AR) challenges and live-stream fe
    - **Tropical Blend**: Compete the mini-games challange.
 4. Earn rewards and collectibles as you progress.
 5. Share your achievements with the community!
+
+
+## Screenshots
+![Screenshot of gameplay]("C:\Users\User\Desktop\Other Files\YeloByte\New folder\Screenshot 2024-11-14 204335.png")
+![Screenshot of treasure hunt interface]("C:\Users\User\Desktop\Other Files\YeloByte\New folder\Screenshot 2024-11-14 204408.png")
+
 
 
 ## Acknowledgments
