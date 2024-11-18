@@ -18,6 +18,7 @@ public class RedeemCode : MonoBehaviour
 
     // Animated game object
     public Animator Score;
+    public Animator Error;
 
     // A dictionary to store valid codes and their corresponding points
     private Dictionary<string, (int points, GameObject uiElement)> validCodes = new Dictionary<string, (int, GameObject)>()
@@ -36,8 +37,8 @@ public class RedeemCode : MonoBehaviour
     };
 
     // Variable to track the player's total points
-    private int playerPoints = 0000;
-    private int playerAddPoints = 0000;
+    private int playerPoints = 0;
+    private int playerAddPoints = 0;
 
     void Start()
     {
@@ -69,6 +70,7 @@ public class RedeemCode : MonoBehaviour
             if (code.Value.uiElement != null)
             {
                 code.Value.uiElement.SetActive(false);
+
             }
         }
     }
@@ -99,11 +101,13 @@ public class RedeemCode : MonoBehaviour
 
             // Provide feedback to the player
             Debug.Log("Code redeemed successfully!");
+            Error.Play("SuccessErrorMsg");
         }
         else
         {
             // Provide feedback for an invalid or already used code
             Debug.Log("Invalid code or already redeemed.");
+            Error.Play("ErrorMsg");
         }
 
         // Clear the input field

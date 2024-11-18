@@ -10,6 +10,7 @@ public class FruitFall : MonoBehaviour
     public GameObject topPanel;
     public GameObject startPanel;
     public GameObject gameOverUI;
+    public GameObject RewardUI;
 
 
     public GameObject[] fruitPrefabs; // Array of fruit prefabs
@@ -84,6 +85,14 @@ public class FruitFall : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+
+    public void Reward()
+    {
+        gameOverUI.SetActive(false);
+        RewardUI.SetActive(true);
+
+    }
+
 
 
     IEnumerator SpawnFruits()

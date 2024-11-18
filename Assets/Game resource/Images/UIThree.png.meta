@@ -279,7 +279,7 @@ TextureImporter:
         width: 169
         height: 141
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -288,6 +288,28 @@ TextureImporter:
       bones: []
       spriteID: dd648f57454337b47ae286e29a052a6a
       internalID: 1903899903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1090
+        width: 964
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c46d9f9390208740bc959861ca64b97
+      internalID: 1086580546
       vertices: []
       indices: 
       edges: []
@@ -309,6 +331,7 @@ TextureImporter:
       Medal_gold: -4445395469136124364
       Medal_silver: 6887995943226969594
       Menu: 1903899903
+      Title: 1086580546
       Yelo_coin: -504621147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

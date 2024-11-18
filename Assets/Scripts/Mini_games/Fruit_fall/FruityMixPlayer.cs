@@ -7,6 +7,7 @@ public class FruityMixPlayer : MonoBehaviour
 {
 
     public int score = 0;
+    public float coins = 0f; // Yelo coins
     public int penalty = 10; // Penalty for colliding with bad fruits
     public int life;    //the life of player
     public GameObject lifeUIOne;
@@ -21,7 +22,8 @@ public class FruityMixPlayer : MonoBehaviour
 
     public TextMeshProUGUI ScoreTxt;
     public TextMeshProUGUI ScoreTxtGOver;
-
+    public TextMeshProUGUI ScoreTxtReward;
+    public TMP_Text CoinTxt; // UI text to display coin balance
     public GameObject penaltyTxt;
 
     public FruitFall fruitgame;
@@ -37,10 +39,13 @@ public class FruityMixPlayer : MonoBehaviour
         {
             // Increase score when colliding with good fruits
             score += 1;
+            coins += 0.05f; // Add coins based on score gained
             Destroy(other.gameObject); // Destroy the collided good fruit
             player.Play("collect");
             ScoreTxt.text = score.ToString();
             ScoreTxtGOver.text = score.ToString();
+            ScoreTxtReward.text = score.ToString();
+            CoinTxt.text = coins.ToString("F2"); // Display coins with 2 decimal places
 
         }
         else if (other.CompareTag("BadFruit"))
@@ -107,11 +112,20 @@ public class FruityMixPlayer : MonoBehaviour
             Vector2 targetPosition = new Vector2(Mathf.Clamp(touchPosition.x, -clampX, clampX), transform.position.y);
             rb.MovePosition(Vector2.Lerp(rb.position, targetPosition, movementSpeed * Time.deltaTime));
         }
+        else if (Input.GetMouseButton(0)) // Check if the left mouse button is held down
+        {
+            // Handle mouse input
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+
+            // Move player horizontally towards mouse position
+            Vector2 targetPosition = new Vector2(Mathf.Clamp(mousePosition.x, -clampX, clampX), transform.position.y);
+            rb.MovePosition(Vector2.Lerp(rb.position, targetPosition, movementSpeed * Time.deltaTime));
+        }
 
         //ScoreTxt.text = score.ToString();
         //ScoreTxtGOver.text = score.ToString();
 
-       
+
         if (life <= 0)
         {
 

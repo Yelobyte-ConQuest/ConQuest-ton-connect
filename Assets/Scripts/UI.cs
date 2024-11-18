@@ -46,7 +46,7 @@ public class UI : MonoBehaviour
         
         gameexpoPage.SetActive(false);
         adventurerPage.SetActive(false);
-        treasureHuntPage.SetActive(false);
+        
         MainPanel.SetActive(false);
         eventPage.SetActive(true);
     }
@@ -57,7 +57,7 @@ public class UI : MonoBehaviour
         eventPage.SetActive(false);
         gameexpoPage.SetActive(true);
         adventurerPage.SetActive(false);
-        treasureHuntPage.SetActive(false);
+        
     }
 
 
@@ -66,7 +66,7 @@ public class UI : MonoBehaviour
         eventPage.SetActive(false);
         gameexpoPage.SetActive(false);
         adventurerPage.SetActive(false);
-        treasureHuntPage.SetActive(false);
+        
         MainPanel.SetActive(true);
     }
 
@@ -80,7 +80,7 @@ public class UI : MonoBehaviour
 
     public void TreasureGame()
     {
-        treasureHuntPage.SetActive(true);
+        
         eventPage.SetActive(false);
         MainPanel.SetActive(false);
         gameexpoPage.SetActive(false);
